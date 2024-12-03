@@ -27,6 +27,43 @@ CREATE TABLE users(                        <br>
 Sudah sangat mengerti.
 #
 4. Hubungkan database tersebut dengan web untuk melakukan CRUD (Create, Read, Update, Delete). Setelah database terhubung dengan web, tampilkan data dari database ke dalam web. <br>
+CREATE: Pembuatan user baru <br>
+$stmt = $pdo->prepare("INSERT INTO users (username, password) VALUES (:username, :password)"); <br>
+            if ($stmt->execute(['username' => $username, 'password' => $hashed_password])) {   <br>
+                $success = "Pendaftaran berhasil! Anda sekarang dapat masuk ke akun Anda.";    <br>
+            } else {                                                                           <br>
+                $error = "Terjadi kesalahan saat mendaftar, coba lagi.";                       <br>
+            }                                                                                  <br>
+
+READ: <br>
+Pengambilan data untuk log in ke akun user yang sudah ada <br>
+$stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username"); <br><br>
+
+Pengambilan data untuk ditampilkan ke leaderboard
+$query = "SELECT username, jumlah_permainan, winrate, rank, jumlah_menang, highscore FROM users WHERE id = :id"; <br>
+    $stmt = $pdo->prepare($query); <br>
+
+UPDATE: Mengupdate data dalam database sewaktu bermain dan selesai bermain <br>
+$query = "UPDATE users SET <br>
+            skor = :skor, 
+            highscore = :highscore, 
+            jumlah_permainan = :jumlah_permainan, 
+            jumlah_menang = :jumlah_menang, 
+            winrate = :winrate, 
+            rank = :rank 
+          WHERE id = :id"; <br>
+
+DELETE: Menghapus akun user selamanya <br>
+$query = "DELETE FROM users WHERE id = :id"; <br>
+    $stmt = $pdo->prepare($query);           <br>
+
+#
+Implementasikan query SQL yang sudah dipelajari seperti DDL (Data Definition Language) untuk mendefinisikan skema database, DML (Data Manipulation Language) untuk melakukan proses manipulasi data yang terdapat dalam database. Pastikan query yang dibuat merupakan clean query.
+
+
+
+
+
 
 
 
