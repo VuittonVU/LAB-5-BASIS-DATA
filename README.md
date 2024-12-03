@@ -34,14 +34,25 @@ $stmt = $pdo->prepare("INSERT INTO users (username, password) VALUES (:username,
             } else {                                                                           <br>
                 $error = "Terjadi kesalahan saat mendaftar, coba lagi.";                       <br>
             }                                                                                  <br>
+![Screenshot (249)](https://github.com/user-attachments/assets/f0325e0e-07a5-489e-ac3b-b2a8b5e219c5)
+![Screenshot (250)](https://github.com/user-attachments/assets/a03a25e2-ec10-49a4-a4ba-260acbcc5688)
+![image](https://github.com/user-attachments/assets/38b5393d-89bc-4657-8027-97bd7589334e) <br>
 
 READ: <br>
 Pengambilan data untuk log in ke akun user yang sudah ada <br>
 $stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username"); <br><br>
 
+Pengambilan data untuk profil <br>
+$query = "SELECT username, jumlah_permainan, winrate, rank, jumlah_menang, highscore FROM users WHERE id = :id"; <br>
+    $stmt = $pdo->prepare($query); <br>
+
+![image](https://github.com/user-attachments/assets/453eba6c-c4f4-444b-baca-2185d356b388) <br>
+
 Pengambilan data untuk ditampilkan ke leaderboard
 $query = "SELECT username, jumlah_permainan, winrate, rank, jumlah_menang, highscore FROM users WHERE id = :id"; <br>
     $stmt = $pdo->prepare($query); <br>
+
+![image](https://github.com/user-attachments/assets/be02f2ad-2e13-4de3-a55d-949076274299) <br>
 
 UPDATE: Mengupdate data dalam database sewaktu bermain dan selesai bermain <br>
 $query = "UPDATE users SET <br>
@@ -52,13 +63,23 @@ $query = "UPDATE users SET <br>
             winrate = :winrate, 
             rank = :rank 
           WHERE id = :id"; <br>
+          
+![image](https://github.com/user-attachments/assets/4a2a5ede-734b-43db-8355-7193a9c4fef7) <br>
+![image](https://github.com/user-attachments/assets/7e7befee-f848-49f1-9d40-4ae82c4a6bd6) <br>
+
 
 DELETE: Menghapus akun user selamanya <br>
 $query = "DELETE FROM users WHERE id = :id"; <br>
     $stmt = $pdo->prepare($query);           <br>
 
+    ![image](https://github.com/user-attachments/assets/31c7960a-ff6a-4d25-bd20-bcc363a71d74) <br>
+    ![image](https://github.com/user-attachments/assets/4e5cd94b-8c68-45ed-a26a-dbe3fae587a1)
+
+
+
+
 #
-Implementasikan query SQL yang sudah dipelajari seperti DDL (Data Definition Language) untuk mendefinisikan skema database, DML (Data Manipulation Language) untuk melakukan proses manipulasi data yang terdapat dalam database. Pastikan query yang dibuat merupakan clean query.
+5. Implementasikan query SQL yang sudah dipelajari seperti DDL (Data Definition Language) untuk mendefinisikan skema database, DML (Data Manipulation Language) untuk melakukan proses manipulasi data yang terdapat dalam database. Pastikan query yang dibuat merupakan clean query.
 
 
 
