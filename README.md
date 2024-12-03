@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/0d3fb110-243f-402d-84af-81229f2c044a)# LAB-5-BASIS-DATA
+# LAB-5-BASIS-DATA
 Sulung Ismanara        - 231401060 <br>
 Vuitton Varian Utomo   - 231401063 <br>
 JASON Sanjaya          - 231401066 <br>
