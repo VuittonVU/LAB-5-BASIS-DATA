@@ -19,6 +19,19 @@ CREATE TABLE users(                        <br>
 );                                         <br>
 #
 2. Gambarkan ERD database tersebut mencakup entity, attribute, dan cardinality. Jumlah tabel minimal 3.
-   ![image](https://github.com/user-attachments/assets/823a06d8-a028-400f-89a9-40381af119bc)
+   ![image](https://github.com/user-attachments/assets/5b14ddfc-0b8c-4868-9b41-9960c7dfabca) <br>
+   ![image](https://github.com/user-attachments/assets/4c43cd6e-2dbd-4636-a5de-2d37ef61e8cc) <br>
+   ![image](https://github.com/user-attachments/assets/05041486-ef8b-43dd-a67f-9c64e01b1178) <br>
+#
+3. Pastikan setiap anggota kelompok harus bisa menceritakan struktur database ini. <br>
+Sudah sangat mengerti.
+#
+4. Hubungkan database tersebut dengan web untuk melakukan CRUD (Create, Read, Update, Delete). Setelah database terhubung dengan web, tampilkan data dari database ke dalam web. <br>
+
+
+
+   
+
+
 
 
