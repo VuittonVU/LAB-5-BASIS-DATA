@@ -19,3 +19,6 @@ CREATE TABLE users(                        <br>
 );                                         <br>
 #
 2. Gambarkan ERD database tersebut mencakup entity, attribute, dan cardinality. Jumlah tabel minimal 3.
+   ![image](https://github.com/user-attachments/assets/823a06d8-a028-400f-89a9-40381af119bc)
+
+
